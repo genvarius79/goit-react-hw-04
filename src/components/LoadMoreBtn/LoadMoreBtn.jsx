@@ -1,9 +1,9 @@
 import "./LoadMoreBtn.module.css";
 
-export default function LoadMoreBtn() {
+export default function LoadMoreBtn({ LoadMore }) {
   return (
     <>
-      <p>LoadMoreBtn</p>
+      <button onClick={LoadMore}>Load more items</button>
     </>
   );
 }
