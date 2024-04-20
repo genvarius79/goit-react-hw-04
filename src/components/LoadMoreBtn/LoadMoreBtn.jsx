@@ -1,9 +1,15 @@
-import "./LoadMoreBtn.module.css";
+import css from "./LoadMoreBtn.module.css";
 
 export default function LoadMoreBtn({ LoadMore }) {
+  const handleClick = () => {
+    // тут виконуєш код
+  };
+
   return (
     <>
-      <button onClick={LoadMore}>Load more items</button>
+      <button className={css.btn} onClick={LoadMore}>
+        Load more items
+      </button>
     </>
   );
 }

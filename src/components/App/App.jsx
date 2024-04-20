@@ -1,5 +1,4 @@
 import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
-// import ImageCard from "../ImageCard/ImageCard.jsx";
 // import ImageModal from "../ImageModal/ImageModal.jsx";
 import Loader from "../Loader/Loader.jsx";
 import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn.jsx";
@@ -9,20 +8,7 @@ import ImageGallery from "../ImageGallery/ImageGallery.jsx";
 import { fetchData } from "../../data-api";
 import css from "./App.module.css";
 
-// export default function App() {
-//   return (
-//     <>
-//       <p>APP</p>
-//
-//       <ImageCard></ImageCard>
-//       <ImageGallery></ImageGallery>
 //       <ImageModal></ImageModal>
-//
-//
-//       <SearchBar></SearchBar>
-//     </>
-//   );
-// }
 
 export default function App() {
   const [items, setItems] = useState([]);
@@ -67,8 +53,6 @@ export default function App() {
 
   return (
     <div className={css.container}>
-      <h1>HTTP requests in React</h1>
-
       <SearchBar onSubmit={handleSearch} />
 
       {error && <ErrorMessage />}

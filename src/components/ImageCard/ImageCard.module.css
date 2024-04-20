@@ -1,0 +1,17 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.image {
+}
+.description {
+  margin-top: 15px;
+  text-wrap: wrap;
+}
+.likes {
+  margin-top: 5px;
+}
+.name {
+  margin-top: 5px;
+}

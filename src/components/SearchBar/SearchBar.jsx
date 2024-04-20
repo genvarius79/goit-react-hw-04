@@ -1,5 +1,6 @@
 import toast, { Toaster } from "react-hot-toast";
 import css from "./SearchBar.module.css";
+import { GoSearch } from "react-icons/go";
 
 export default function SearchBar({ onSubmit }) {
   const handleSubmit = (event) => {
@@ -15,21 +16,31 @@ export default function SearchBar({ onSubmit }) {
   };
 
   return (
-    <header>
+    <header className={css.header}>
       <Toaster
         toastOptions={{
           className: css.toaster,
+          style: {
+            border: "1px solid #713200",
+            padding: "16px",
+            background: "#ff0000",
+            color: "#ffffff",
+            marginTop: "150px",
+          },
         }}
       />
-      <form onSubmit={handleSubmit}>
+      <form className={css.form} onSubmit={handleSubmit}>
+        <button className={css.btn} type="submit">
+          <GoSearch />
+        </button>
         <input
+          className={css.input}
           type="text"
           name="query"
           autoComplete="off"
           autoFocus
           placeholder="Search images and photos"
         />
-        <button type="submit">Search</button>
       </form>
     </header>
   );
